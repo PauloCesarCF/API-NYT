@@ -31,15 +31,19 @@ header{
   border-bottom: 3px solid #727272
 }
 
-.r{
+.informationsFromScreenBig{
   padding: 15px;
   max-width: 55%;
   text-align: center
 }
 
-.imgs{
+.contentImgsFromScreenBig{
   text-align: left;
   max-width: 44%
+}
+
+.containerFromScreenSmall{
+  display: none
 }
 
 .title{
@@ -99,16 +103,19 @@ small{
 
 @media (max-width: 890px){
   .container{
-    display: block
+    display: block;
   }
-  .r{
-    max-width: 100%
+
+  .informationsFromScreenBig{
+    display: none;
   }
-  .imgs{
-    text-align: center;
-    max-width: 100%
+
+  .contentImgsFromScreenBig{
+    display: none
   }
-  .img{
-    max-width: 300px
+
+  .containerFromScreenSmall{
+    display: block;
+    text-align: center
   }
 }
