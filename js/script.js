@@ -20,18 +20,24 @@ async function insertFMostPopular(teste){
   insertArticles.map((films) => {
     const articles = document.querySelector('article');
     
-    const article = document.createElement('article');
+    const container = document.createElement('div');
+    const informations = document.createElement('article');
+    const imgs = document.createElement('article');
     const title = document.createElement('h2');
     const date = document.createElement('p');
+    const img = document.createElement('img');
     const caption = document.createElement('p');
     const copyright = document.createElement('small');
-    const abstrate = document.createElement('h3')
+    const abstrate = document.createElement('p')
     const byline = document.createElement('p');
     const link = document.createElement('a');
 
-    article.classList.add('r'); 
+    container.classList.add('container');
+    informations.classList.add('r');
     title.classList.add('title');
     date.classList.add('date');
+    img.classList.add('img');
+    imgs.classList.add('imgs');
     caption.classList.add('caption');
     abstrate.classList.add('abstrate');
     byline.classList.add('byline');
@@ -47,20 +53,23 @@ async function insertFMostPopular(teste){
     link.setAttribute('href', films.url)
     link.innerText = 'Read more'
     
-    const img = document.createElement('img') 
-    img.setAttribute('src', films.media[0]['media-metadata'][2].url)
-    img.setAttribute('alt', 'Image from new york time')
+    img.setAttribute('src', films.media[0]['media-metadata'][2].url);
+    img.setAttribute('alt', 'Image from new york time');
 
-    article.appendChild(title);
-    article.appendChild(date);
-    article.appendChild(img);
-    article.appendChild(caption);
-    article.appendChild(copyright);
-    article.appendChild(abstrate);
-    article.appendChild(byline);
-    article.appendChild(link);
+    informations.appendChild(date);
+    informations.appendChild(title);
+    informations.appendChild(abstrate);
+    informations.appendChild(byline);
+    informations.appendChild(link);
 
-    articles.appendChild(article);
+    imgs.appendChild(img)
+    imgs.appendChild(caption);
+    imgs.appendChild(copyright);
+
+    container.appendChild(imgs);
+    container.appendChild(informations);
+
+    articles.appendChild(container);
   })
 }
 

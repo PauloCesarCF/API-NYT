@@ -7,7 +7,8 @@
 header{
   text-align: center;
   padding: 10px;
-  border: 1px solid black
+  margin: 10px;
+  border-bottom: 1px solid black
 }
 
 .loading{
@@ -21,15 +22,24 @@ header{
 
 .articles{
   margin: auto;
-  text-align: center;
-  max-width: 1000px
+  width: 98%;
+}
+
+.container{
+  display: flex;
+  padding: 10px;
+  border-bottom: 3px solid #727272
 }
 
 .r{
-  border-right:  2px solid black;
-  border-bottom:  2px solid black;
-  border-left: 2px solid black;
-  padding: 10px;
+  padding: 15px;
+  max-width: 55%;
+  text-align: center
+}
+
+.imgs{
+  text-align: left;
+  max-width: 44%
 }
 
 .title{
@@ -40,7 +50,8 @@ header{
   margin-bottom: 15px
 }
 
-img{
+.img{
+  display: inline-block;
   max-width: 500px
 }
 
@@ -50,6 +61,7 @@ img{
 
 small{
   color: #727272;
+  text-align: center;
 }
 
 .abstrate{
@@ -85,8 +97,18 @@ small{
   text-align: center
 }
 
-@media (max-width: 620px){
-  img{
+@media (max-width: 890px){
+  .container{
+    display: block
+  }
+  .r{
+    max-width: 100%
+  }
+  .imgs{
+    text-align: center;
+    max-width: 100%
+  }
+  .img{
     max-width: 300px
   }
 }
