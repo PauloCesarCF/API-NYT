@@ -4,20 +4,31 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@font-face {
+  font-family: 'jornal';
+  src: url('../font/Walbaum-FrakturUNZ1.ttf') format('truetype');
+}
+
 header{
   text-align: center;
   padding: 10px;
   margin: 10px;
-  border-bottom: 1px solid black
+  border-bottom: 1px solid black;
+}
+
+header h1{
+  font-family: 'jornal';
+  font-size: 3em
 }
 
 .loading{
   margin: 20px;
-  font-size: 30px
+  font-size: 30px;
+  text-align: center;
 }
 
 .hide{
-  display: none
+  display: none;
 }
 
 .articles{
